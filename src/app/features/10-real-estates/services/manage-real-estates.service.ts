@@ -1,34 +1,25 @@
 import { Injectable } from '@angular/core';
+import { of } from 'rxjs';
 
 import { RealEstatesApiService } from '../../../core/api/real-estates-api.service';
 import { RealEstate } from './real-estate.model';
-import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class ManageRealEstatesService {
 
-  selectedRealEstate$: BehaviorSubject<RealEstate> = new BehaviorSubject(null);
-  realEstates$: BehaviorSubject<RealEstate[]> = new BehaviorSubject([]);
+  // TODO: selected & realEstates
+  realEstates$ = of([]); // TODO
+  selectedRealEstate$ = of(null);  // TODO
 
   constructor(private apiService: RealEstatesApiService) {
   }
 
   fetch() {
-    this.reset();
-    this.apiService.getAll().subscribe((realEstates: RealEstate[]) => {
-      this.realEstates$.next(realEstates);
-    });
+    // TODO
   }
 
   toggleRealEstate(estate: RealEstate) {
-    if (this.selectedRealEstate$.value === estate) {
-      this.reset();
-    } else {
-      this.selectedRealEstate$.next(estate);
-    }
+    // TODO
   }
 
-  private reset() {
-    this.selectedRealEstate$.next(null);
-  }
 }

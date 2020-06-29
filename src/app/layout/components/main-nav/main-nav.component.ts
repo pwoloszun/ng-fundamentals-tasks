@@ -19,22 +19,11 @@ export class MainNavComponent {
     { text: 'Citites', url: '/cities' },
     { text: 'Real Estates', url: '/real-estates' },
 
-    // { text: 'Pipes', url: '/pipes-examples' },
-    // { text: 'DI', url: '/di-examples' },
-    // { text: 'Forms', url: '/my-forms' },
-    { text: 'Forms tasks', url: '/forms-tasks' },
-    { text: 'Dynamic Comp.', url: '/dynamic-components' },
-    { text: 'Custom Directives', url: '/custom-directives' },
-    { text: 'Content Projection', url: '/content-projection' },
-    { text: 'DI, providers', url: '/di-providers-examples' },
-
-    { text: 'RxJS GUI tasks', url: '/rxjs-gui-tasks' },
-    { text: 'RxJS GitHub repos', url: '/rxjs-github-repos' },
   ];
 
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
     .pipe(map((result) => result.matches));
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver) { }
 }

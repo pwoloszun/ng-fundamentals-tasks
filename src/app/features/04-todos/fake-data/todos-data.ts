@@ -1,4 +1,6 @@
-const TODOS_DATA = [
+import { TodoModel } from '../models/todo.model';
+
+const TODOS_DATA: TodoModel[] = [
   {
     title: 'rrrr',
     description: 'sd',

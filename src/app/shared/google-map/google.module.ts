@@ -7,17 +7,21 @@ const envs = [
 // @ts-ignore
 if (envs.includes(process.env.NODE_ENV)) {
   google = {
-    maps: {},
+    maps: {}
   };
 
-  class LatLng { }
+  class LatLng {
+  }
 
-  class Map { }
+  class Map {
+  }
 
   class Marker {
-    addListener() { }
+    addListener() {
+    }
 
-    setIcon() { }
+    setIcon() {
+    }
   }
 
   google.maps.LatLng = LatLng;

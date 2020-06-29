@@ -12,23 +12,9 @@ export class CarConfiguratorComponent implements OnInit {
 
   selectedColor: string = null;
   colors = ['Black', 'White', 'Red', 'Yellow'];
-  
+
   selectedDriveWheel: string = null;
   driveWheels = ['4X', 'Front-Wheel-Drive', 'Rear-Wheel-Drive'];
-
-  selectEngine(engine) {
-    console.log('selectEngine(engine)', engine);
-    this.selectedEngine = engine;
-  }
-
-  selectColor($event) {
-    console.log('color', $event);
-    this.selectedColor = $event;
-  }
-
-  selectDriveWheel($event) {
-    this.selectedDriveWheel = $event;
-  }
 
   ngOnInit() {
   }

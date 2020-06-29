@@ -9,18 +9,6 @@ const defaultPrompt = 'Choose from:';
 })
 export class OptionPickerComponent implements OnInit {
 
-  @Input() label: string;
-  @Input() options: string[];
-  @Output() optionSelect: EventEmitter<string> = new EventEmitter<string>();
-
-  get headerText() {
-    return this.label || defaultPrompt;
-  }
-
-  choose(option: string) {
-    this.optionSelect.emit(option);
-  }
-
   ngOnInit() {
   }
 }

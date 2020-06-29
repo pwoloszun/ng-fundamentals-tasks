@@ -42,43 +42,6 @@ const appRoutes: Routes = [
     path: 'real-estates',
     loadChildren: () => import('./features/10-real-estates/real-estates.module').then((m) => m.RealEstatesModule),
   },
-  {
-    path: 'forms-tasks',
-    loadChildren: () => import('./features/11-forms-tasks/forms-tasks.module').then((m) => m.FormsTasksModule),
-  },
-  {
-    path: 'dynamic-components',
-    loadChildren: () =>
-      import('./features/12-dynamic-components/dynamic-components.module').then((m) => m.DynamicComponentsModule),
-  },
-  {
-    path: 'custom-directives',
-    loadChildren: () =>
-      import('./features/13-custom-directives/custom-directives.module').then((m) => m.CustomDirectivesModule),
-  },
-  {
-    path: 'content-projection',
-    loadChildren: () =>
-      import('./features/21-content-projection/content-projection.module').then((m) => m.ContentProjectionModule),
-  },
-  {
-    path: 'di-providers-examples',
-    loadChildren: () =>
-      import('./features/14-di-providers-examples/di-providers-examples.module').then(
-        (m) => m.DiProvidersExamplesModule
-      ),
-  },
-
-  // TODO
-  {
-    path: 'rxjs-gui-tasks',
-    loadChildren: () => import('./features/39-rxjs-gui-tasks/rxjs-gui-tasks.module').then((m) => m.RxjsGuiTasksModule),
-  },
-  {
-    path: 'rxjs-github-repos',
-    loadChildren: () =>
-      import('./features/51-rxjs-github-repos/rxjs-github-repos.module').then((m) => m.RxjsGithubReposModule),
-  },
 
   { path: '**', component: PageNotFoundComponent },
 ];
@@ -87,4 +50,4 @@ const appRoutes: Routes = [
   imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

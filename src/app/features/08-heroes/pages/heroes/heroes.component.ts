@@ -24,14 +24,14 @@ export class HeroesComponent implements OnInit {
     ];
 
     this.heroesService.getAll().subscribe((data: Hero[]) => {
-      console.log('data table PAGE', data);
-      this.heroes = data;
+      console.log('fetched heroes', data);
+      // TODO
     });
   }
 
   onHeroClick(hero: Hero) {
     console.log('data table PAGE, selected:', hero);
-    this.selectedHero = hero;
+    // TODO
   }
 
 }

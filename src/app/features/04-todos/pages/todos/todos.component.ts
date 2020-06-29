@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 
 import { TodoFormVm } from '../../components/todos-form/todos-form.component';
-import { MyManageTodosService, Todo } from '../../services/my-manage-todos.service';
+import { TodoModel } from '../../models/todo.model';
+import { TODOS_DATA } from '../../fake-data/todos-data';
 
 @Component({
   selector: 'nts-todos',
@@ -10,20 +10,17 @@ import { MyManageTodosService, Todo } from '../../services/my-manage-todos.servi
 })
 export class TodosComponent implements OnInit {
 
-  todos$: Observable<Todo[]>;
-
-  constructor(private todosService: MyManageTodosService) {
-  }
+  todos: TodoModel[] = [];
 
   ngOnInit() {
-    this.todos$ = this.todosService.allTodos$;
+    this.todos = TODOS_DATA;
   }
 
   deleteTodo(todo) {
-    this.todosService.remove(todo);
+    // TODO
   }
 
   createTodo(todoData: TodoFormVm) {
-    this.todosService.create(todoData);
+    // TODO
   }
 }
