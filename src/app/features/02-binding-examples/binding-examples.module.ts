@@ -11,7 +11,6 @@ import { TwoWayBindingExampleComponent } from './components/03-two-way-binding-e
 import { BindingExamplesComponent } from './pages/binding-examples/binding-examples.component';
 import { StyledTextComponent } from './components/styled-text/styled-text.component';
 import { QuadraticEquationComponent } from './components/quadratic-equation/quadratic-equation.component';
-import { MyCounterComponent } from './components/my-counter/my-counter.component';
 import { MyToggleComponent } from './components/my-toggle/my-toggle.component';
 
 @NgModule({
@@ -28,7 +27,6 @@ import { MyToggleComponent } from './components/my-toggle/my-toggle.component';
     BindingExamplesComponent,
     StyledTextComponent,
     QuadraticEquationComponent,
-    MyCounterComponent,
     MyToggleComponent,
   ],
 })

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+// TODO 1: [ngClass]
+// TODO 2: handle 'change' event
+
 @Component({
   selector: 'nts-styled-text',
   templateUrl: './styled-text.component.html',
@@ -12,18 +15,6 @@ export class StyledTextComponent implements OnInit {
   isUnderline = false;
   isItalic = false;
 
-  get textCssClasses() {
-    return {
-      'make-bold': this.isBold,
-      'add-underline': this.isUnderline,
-      'my-italic': this.isItalic,
-    };
-  }
-
   ngOnInit() {
-  }
-
-  toggleCssClass(cssPropName) {
-    this[cssPropName] = !this[cssPropName];
   }
 }
