@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { CustomMaterialModule } from './custom-material/custom-material.module';
 import { DataTableComponent } from './data-table/data-table.component';
 import { GoogleMapComponent } from './google-map/google-map.component';
+import { ErrorModalComponent } from './error-modal/error-modal.component';
 
 @NgModule({
   imports: [
@@ -15,12 +16,14 @@ import { GoogleMapComponent } from './google-map/google-map.component';
   declarations: [
     DataTableComponent,
     GoogleMapComponent,
+    ErrorModalComponent,
   ],
   exports: [
     CustomMaterialModule,
     // components
     DataTableComponent,
     GoogleMapComponent,
+    ErrorModalComponent,
   ],
 })
 export class SharedModule {

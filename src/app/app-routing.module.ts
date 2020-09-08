@@ -43,6 +43,17 @@ const appRoutes: Routes = [
     loadChildren: () => import('./features/10-real-estates/real-estates.module').then((m) => m.RealEstatesModule),
   },
 
+  // TODO
+  {
+    path: 'rxjs-gui-tasks',
+    loadChildren: () => import('./features/39-rxjs-gui-tasks/rxjs-gui-tasks.module').then((m) => m.RxjsGuiTasksModule),
+  },
+  {
+    path: 'rxjs-github-repos',
+    loadChildren: () =>
+      import('./features/51-rxjs-github-repos/rxjs-github-repos.module').then((m) => m.RxjsGithubReposModule),
+  },
+
   { path: '**', component: PageNotFoundComponent },
 ];
 

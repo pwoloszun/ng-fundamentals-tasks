@@ -19,6 +19,8 @@ export class MainNavComponent {
     { text: 'Citites', url: '/cities' },
     { text: 'Real Estates', url: '/real-estates' },
 
+    { text: 'RxJS GUI tasks', url: '/rxjs-gui-tasks' },
+    { text: 'RxJS GitHub repos', url: '/rxjs-github-repos' },
   ];
 
   isHandset$: Observable<boolean> = this.breakpointObserver
