@@ -25,6 +25,9 @@ import { ErrorModalComponent } from './error-modal/error-modal.component';
     GoogleMapComponent,
     ErrorModalComponent,
   ],
+  entryComponents: [
+    ErrorModalComponent
+  ]
 })
 export class SharedModule {
 }

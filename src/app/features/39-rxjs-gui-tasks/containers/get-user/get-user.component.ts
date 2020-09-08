@@ -21,6 +21,11 @@ export class GetUserComponent {
 
   handleDownloadUser() {
     // TODO
+    // console.log();
+
+    // this.fakeApiService.failedRequest$
+
+    this.openErrorSnackBar('qq', 5);
   }
 
   private openErrorSnackBar(message: string, durationInSeconds: number) {
