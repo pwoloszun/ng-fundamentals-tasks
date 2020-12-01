@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material';
-
-import { ErrorModalComponent } from '../../../../shared/error-modal/error-modal.component';
-import { FakeApiService } from '../../../../core/api/fake-api.service';
-import { fullObserver } from '../../../../utils';
 import { catchError, finalize } from 'rxjs/operators';
+
+import { ErrorModalComponent } from '@shared/error-modal/error-modal.component';
+import { FakeApiService } from '@api/fake-api.service';
+import { fullObserver } from '@app/utils';
 
 @Component({
   selector: 'nts-get-user',

@@ -2,25 +2,24 @@ import { TodoModel } from '../models/todo.model';
 
 const TODOS_DATA: TodoModel[] = [
   {
-    title: 'rrrr',
-    description: 'sd',
-    id: 104
+    id: 91,
+    title: 'Do Homework',
+    description: 'Math, physics'
   },
   {
-    title: 'abc',
-    description: 'def',
-    id: 106
+    id: 92,
+    title: 'Walk the dog',
+    description: 'at 7pm'
   },
   {
-    title: 'tt',
-    description: 'sdsds',
-    id: 107
+    id: 93,
+    title: 'Buy milk',
+    description: 'important!'
   },
   {
-    title: 'marc',
-    description: '',
-    id: 108
-  }
+    id: 94,
+    title: 'play some games'
+  },
 ];
 
 export { TODOS_DATA };
