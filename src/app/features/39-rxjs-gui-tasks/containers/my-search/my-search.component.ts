@@ -12,7 +12,14 @@ import { SearchApiService } from '@api/search-api.service';
 })
 export class MySearchComponent {
 
-  searchText = new FormControl('');
+  searchTextCtrl = new FormControl('');
+
+  // TODO
+  searchResults$ = of([
+    'bob',
+    'batman',
+    'imba!'
+  ]);
 
   constructor(private searchApiService: SearchApiService) {
   }
