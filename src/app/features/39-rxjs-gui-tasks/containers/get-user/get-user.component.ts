@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { catchError, finalize } from 'rxjs/operators';
 
 import { ErrorModalComponent } from '@shared/error-modal/error-modal.component';
