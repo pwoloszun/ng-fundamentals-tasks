@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HelloWorldComponent implements OnInit {
 
-  name;
+  name = '';
 
   ngOnInit() {
   }
