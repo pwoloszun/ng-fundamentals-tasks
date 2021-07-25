@@ -22,7 +22,7 @@ export class BetterStreamableContainerComponent implements OnChanges, OnDestroy 
   private allStatuses = BETTER_STREAM_STATUS;
 
   private receivedData: any = null;
-  private receivedError: Error = null;
+  private receivedError: Error | null = null;
 
   private subscription: Subscription;
 

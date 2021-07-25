@@ -17,7 +17,7 @@ const SEARCH_QUERY_MIN_LENGTH = 3;
   styleUrls: ['./repository-list.component.css'],
 })
 export class RepositoryListComponent implements OnInit {
-  private selectedRepo$ = new BehaviorSubject<RepoItem>(null);
+  private selectedRepo$ = new BehaviorSubject<RepoItem | null>(null);
 
   searchResults$: Observable<RepoItem[]>;
   searchForm = this.buildSearchForm();
@@ -38,7 +38,7 @@ export class RepositoryListComponent implements OnInit {
     // const params = { q: query };
     // this.http.get<RepoSearchResult>(GITHUB_URL, { params });
 
-    return null; // TODO 1
+    return null as any; // TODO 1
   }
 
   ngOnInit() {

@@ -12,7 +12,7 @@ import { SearchApiService } from '../../../../core/api/search-api.service';
 export class ContentProjectionComponent implements OnDestroy {
 
   isFetching = false;
-  searchResults = [];
+  searchResults: string[] = [];
   private searchSubscription: Subscription;
 
   myRequest$: Subject<Date>;

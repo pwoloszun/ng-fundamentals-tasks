@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable, BehaviorSubject, of } from 'rxjs';
 import { filter, map, tap, switchMap } from 'rxjs/operators';
 import { RepoItem, RepoOwner, RepositoryType } from '../models/search-repos.model';
 
@@ -10,7 +10,7 @@ const GITHUB_URL = 'https://api.github.com/search/repositories';
   providedIn: 'root'
 })
 export class SearchReposFacadeService {
-  private selectedRepo$ = new BehaviorSubject<RepoItem>(null);
+  private selectedRepo$ = new BehaviorSubject<RepoItem | null>(null);
 
   // TODO
   isLoading$: Observable<boolean>;
@@ -21,7 +21,7 @@ export class SearchReposFacadeService {
 
   searchRepos(query: string, type: RepositoryType): Observable<RepoItem[]> {
     //TODO
-    return null;
+    return of([]);
   }
 
   selectRepo(repo: RepoItem): void {
@@ -30,6 +30,6 @@ export class SearchReposFacadeService {
 
   fetchReposByOwner(owner: RepoOwner): Observable<RepoItem[]> {
     //TODO
-    return null;
+    return of([]);
   }
 }

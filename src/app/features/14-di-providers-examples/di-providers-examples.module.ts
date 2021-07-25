@@ -22,7 +22,7 @@ import { MyOtherService } from './services/my-other/my-other.service';
       useFactory: (other: MyOtherService) => {
         other.doSomething(123);
         return {
-          log(d) {
+          log(d: any): void {
             console.log('qqq', Math.random());
           }
         };

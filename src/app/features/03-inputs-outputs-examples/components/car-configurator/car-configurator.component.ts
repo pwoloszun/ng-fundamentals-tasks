@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarConfiguratorComponent implements OnInit {
 
-  selectedEngine: string = null;
+  selectedEngine: string | null = null;
   engines = ['Petrol', 'Diesel', 'Tesla'];
 
-  selectedColor: string = null;
+  selectedColor: string | null = null;
   colors = ['Black', 'White', 'Red', 'Yellow'];
 
-  selectedDriveWheel: string = null;
+  selectedDriveWheel: string | null = null;
   driveWheels = ['4X', 'Front-Wheel-Drive', 'Rear-Wheel-Drive'];
 
   ngOnInit() {

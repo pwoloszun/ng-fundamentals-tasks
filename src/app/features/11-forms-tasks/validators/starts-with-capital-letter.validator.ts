@@ -1,8 +1,8 @@
-import { ValidatorFn, ValidationErrors, FormControl, Validators } from '@angular/forms';
+import { ValidatorFn, ValidationErrors, FormControl, Validators, AbstractControl } from '@angular/forms';
 
 const capitalLetterRE = /^[A-Z]/;
 
-export const startsWithCapitalLetterValidator: ValidatorFn = (control: FormControl): ValidationErrors | null => {
+export const startsWithCapitalLetterValidator: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
   const { value } = control;
 
   if (capitalLetterRE.test(value)) {

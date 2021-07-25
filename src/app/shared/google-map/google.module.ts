@@ -1,4 +1,4 @@
-let google;
+let google: any;
 const envs = [
   'test',
   // 'development' // TODO: uncomment if no internet connection

@@ -18,7 +18,9 @@ const interestsMap = {
   culture: ['books', 'films', 'poetry'],
 };
 
-export function getInterestsByType$(interestTypeId: string): Observable<string[]> {
+type InterestTypeId = keyof typeof interestsMap;
+
+export function getInterestsByType$(interestTypeId: InterestTypeId): Observable<string[]> {
   const resultVal = interestsMap[interestTypeId] || [];
   return of(resultVal).pipe(
     delay(1200)

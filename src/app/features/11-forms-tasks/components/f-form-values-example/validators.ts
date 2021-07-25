@@ -1,9 +1,9 @@
-import { FormGroup, FormControl, ValidatorFn, ValidationErrors } from '@angular/forms';
+import { FormGroup, FormControl, ValidatorFn, ValidationErrors, AbstractControl } from '@angular/forms';
 import { omit, merge, keys } from 'lodash';
 
 import { Country } from '../../dictionaries/countries.dict';
 
-function includeError(errors = {}, newError) {
+function includeError(errors = {}, newError: Error) {
   return merge(errors, newError);
 }
 
@@ -20,7 +20,7 @@ function excludeError(errors: any, errorKey: string) {
   }
 }
 
-export const nameCountryValidator: ValidatorFn = (group: FormGroup): ValidationErrors | null => {
+export const nameCountryValidator: ValidatorFn = (group: AbstractControl): ValidationErrors | null => {
   // TODO: get groups: personalInfo & address
 
   // TODO: get ctrls: fullName& country
@@ -31,7 +31,7 @@ export const nameCountryValidator: ValidatorFn = (group: FormGroup): ValidationE
   return null;
 };
 
-export const properNameValidator: ValidatorFn = (personalInfoGroup: FormGroup): ValidationErrors | null => {
+export const properNameValidator: ValidatorFn = (personalInfoGroup: AbstractControl): ValidationErrors | null => {
   const fullNameCtrl = personalInfoGroup.get('fullName') as FormControl;
   const name = fullNameCtrl.value as string;
 

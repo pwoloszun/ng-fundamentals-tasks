@@ -21,9 +21,9 @@
   </div>
 
   <div *ngFor="let singleToppingCtrl of toppingsArrayCtrl.controls; let i=index;">
-    <label>
+    <label formControlName="toppings">
       <input type="checkbox"
-             [formControl]="singleToppingCtrl" />
+             [formControlName]="i" />
       {{ availableToppings[i].name }}
     </label>
   </div>

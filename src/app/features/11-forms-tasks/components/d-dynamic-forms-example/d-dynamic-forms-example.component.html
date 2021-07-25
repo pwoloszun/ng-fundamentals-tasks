@@ -11,9 +11,9 @@
   </div>
 
   <div *ngFor="let singleToppingCtrl of userRolesArrayCtrl.controls; let i=index;">
-    <label>
+    <label formControlName="userRoles">
       <input type="checkbox"
-             [formControl]="singleToppingCtrl" />
+             [formControlName]="i" />
       {{ availableUserRoles[i].name }}
     </label>
   </div>
@@ -25,8 +25,10 @@
             color="primary">Add</button>
 
     <div *ngFor="let extrasCtrl of extrasArrayCtrl.controls; let i=index">
-      <input [formControl]="extrasCtrl"
-             type="text" />
+      <label formControlName="extras">
+        <input [formControlName]="i"
+               type="text" />
+      </label>
       <button mat-raised-button
               (click)="removeExtra(i)">Remove</button>
     </div>
@@ -38,24 +40,26 @@
             (click)="createOtherUser()"
             color="primary">Add User</button>
 
-    <div *ngFor="let userGroupCtrl of otherUsersArrayCtrl.controls; let i=index"
-         [formGroup]="userGroupCtrl">
-      <input formControlName="name"
-             placeholder="User Name"
-             type="text" />
-      <input formControlName="age"
-             placeholder="User Age"
-             type="number" />
-      <label>
-        <input formControlName="hasAgreed"
-               type="checkbox" />
-        Agree?
-      </label>
+    <div formGroupName="otherUsers">
+      <div *ngFor="let userGroupCtrl of otherUsersArrayCtrl.controls; let i=index"
+           [formGroupName]="i">
+        <input formControlName="name"
+               placeholder="User Name"
+               type="text" />
+        <input formControlName="age"
+               placeholder="User Age"
+               type="number" />
+        <label>
+          <input formControlName="hasAgreed"
+                 type="checkbox" />
+          Agree?
+        </label>
 
-      <button mat-raised-button
-              (click)="removeOtherUser(i)">Remove User</button>
+        <button mat-raised-button
+                (click)="removeOtherUser(i)">Remove User</button>
 
-      <hr />
+        <hr />
+      </div>
     </div>
   </div>
 

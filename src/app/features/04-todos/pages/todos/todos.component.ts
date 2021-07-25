@@ -16,7 +16,7 @@ export class TodosComponent implements OnInit {
     this.todos = TODOS_DATA;
   }
 
-  deleteTodo(todo) {
+  deleteTodo(todo: TodoModel) {
     // TODO
   }
 

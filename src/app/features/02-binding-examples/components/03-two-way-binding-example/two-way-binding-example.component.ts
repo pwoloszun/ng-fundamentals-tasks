@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwoWayBindingExampleComponent implements OnInit {
 
-  message;
+  message: any;
   types: string[];
 
   ngOnInit(): void {

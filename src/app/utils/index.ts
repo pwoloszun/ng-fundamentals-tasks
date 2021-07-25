@@ -21,6 +21,6 @@ export function fullObserver(tag: string): Observer<any> {
   };
 }
 
-export function randomBetween(min, max) {
+export function randomBetween(min: number, max: number): number {
   return Math.floor(min + Math.random() * (max - min));
 }

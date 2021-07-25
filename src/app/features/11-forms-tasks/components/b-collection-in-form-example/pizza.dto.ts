@@ -19,7 +19,7 @@ export class PizzaDTO {
       const isSelected = formValue.toppings[i];
       memo[id] = isSelected;
       return memo;
-    }, {});
+    }, {} as SelectedToppingsMap);
   }
 }
 

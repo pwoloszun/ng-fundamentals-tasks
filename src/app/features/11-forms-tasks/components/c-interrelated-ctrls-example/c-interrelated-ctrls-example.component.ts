@@ -50,6 +50,9 @@ export class CInterrelatedCtrlsExampleComponent implements OnInit {
       filter((value) => value.length >= 6),
     ).subscribe((nationalIdValue: string) => {
       const parts = nationalIdValue.match(/^(\d{2})(\d{2})(\d{2})/);
+      if (parts === null || parts.length < 4) {
+        throw new Error(`Missing parts ${parts}`);
+      }
       const dobValue = `19${parts[1]}-${parts[2]}-${parts[3]}`;
       this.dobCtrl.setValue(dobValue);
     });

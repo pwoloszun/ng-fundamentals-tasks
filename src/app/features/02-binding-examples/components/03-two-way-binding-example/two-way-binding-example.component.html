@@ -2,7 +2,7 @@
   <h3>Two-way Binding Examples</h3>
 
   <div>
-    <p>Message text: {{message.text}}</p>
+    <p>Message text: {{message?.text}}</p>
     <input [(ngModel)]="message.text" />
   </div>
 
@@ -11,7 +11,8 @@
   <div>
     <p>Message type: {{message.type}}</p>
     <select [(ngModel)]="message.type">
-      <option *ngFor="let t of types" [value]="t">{{t}}</option>
+      <option *ngFor="let t of types"
+              [value]="t">{{t}}</option>
     </select>
   </div>
 </div>

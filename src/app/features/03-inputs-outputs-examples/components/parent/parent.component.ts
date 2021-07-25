@@ -9,7 +9,7 @@ export class ParentComponent implements OnInit {
 
   parentMsg = '';
 
-  logMessage(message) {
+  logMessage(message: string) {
     console.log('received from Child', message);
   }
 

@@ -1,8 +1,8 @@
-import { ValidatorFn, ValidationErrors, FormControl, Validators } from '@angular/forms';
+import { AbstractControl, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 
 import { startsWithCapitalLetterValidator } from './starts-with-capital-letter.validator';
 
-export const defaultNameValidator: ValidatorFn = (control: FormControl): ValidationErrors | null => {
+export const defaultNameValidator: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
   const requiredValidationResult = Validators.required(control);
   const minLengthValidationResult = Validators.minLength(3)(control);
   const capitalLetterValidationResult = startsWithCapitalLetterValidator(control);

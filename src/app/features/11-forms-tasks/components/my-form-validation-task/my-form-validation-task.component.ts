@@ -24,7 +24,7 @@ export class MyFormValidationTaskComponent implements OnInit {
   constructor(private fb: FormBuilder) {
   }
 
-  submitHandler(event) {
+  submitHandler(event: any) {
     const formValue = {}; // TODO: DTO
     console.log('form task value', formValue);
   }

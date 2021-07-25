@@ -1,6 +1,6 @@
-import { ValidatorFn, FormGroup, ValidationErrors, AbstractControl } from '@angular/forms';
+import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 
-function getCtrl(name: string, group: FormGroup): AbstractControl {
+function getCtrl(name: string, group: AbstractControl): AbstractControl {
   const control = group.get(name);
   if (!control) {
     throw new Error(`Missing '${name}' form control`);
@@ -8,7 +8,7 @@ function getCtrl(name: string, group: FormGroup): AbstractControl {
   return control;
 }
 
-export const dobNationalIdValidator: ValidatorFn = (group: FormGroup): ValidationErrors | null => {
+export const dobNationalIdValidator: ValidatorFn = (group: AbstractControl): ValidationErrors | null => {
   const dobCtrl = getCtrl('dateOfBirth', group);
   const nationalIdCtrl = getCtrl('nationalId', group);
 
