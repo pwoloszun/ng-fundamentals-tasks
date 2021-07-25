@@ -19,6 +19,11 @@ export class MainNavComponent {
     { text: 'Citites', url: '/cities' },
     { text: 'Real Estates', url: '/real-estates' },
 
+    { text: 'Forms tasks', url: '/forms-tasks' },
+    { text: 'DI, providers', url: '/di-providers-examples' },
+    { text: 'Content Projection', url: '/content-projection' },
+    { text: 'Refs to tmpl. elements', url: '/refs-to-template-elements' },
+
     { text: 'RxJS GUI tasks', url: '/rxjs-gui-tasks' },
     { text: 'RxJS GitHub repos', url: '/rxjs-github-repos' },
   ];

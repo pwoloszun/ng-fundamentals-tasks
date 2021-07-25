@@ -43,6 +43,28 @@ const appRoutes: Routes = [
     loadChildren: () => import('./features/10-real-estates/real-estates.module').then((m) => m.RealEstatesModule),
   },
 
+  {
+    path: 'forms-tasks',
+    loadChildren: () => import('./features/11-forms-tasks/forms-tasks.module').then((m) => m.FormsTasksModule),
+  },
+  {
+    path: 'di-providers-examples',
+    loadChildren: () =>
+      import('./features/14-di-providers-examples/di-providers-examples.module').then(
+        (m) => m.DiProvidersExamplesModule
+      ),
+  },
+  {
+    path: 'content-projection',
+    loadChildren: () =>
+      import('./features/21-content-projection/content-projection.module').then((m) => m.ContentProjectionModule),
+  },
+  {
+    path: 'refs-to-template-elements',
+    loadChildren: () =>
+      import('./features/22-refs-to-template-elements/refs-to-template-elements.module').then((m) => m.RefsToTemplateElementsModule),
+  },
+
   // TODO
   {
     path: 'rxjs-gui-tasks',
