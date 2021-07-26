@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HelloWorldComponent implements OnInit {
 
-  name = '';
+  person = {
+    name: `bobek ${Math.random()}`,
+    age: 123
+  };
 
   ngOnInit() {
+    // this.name = 'qq';
   }
 
 }

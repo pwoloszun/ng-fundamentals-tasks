@@ -2,16 +2,26 @@
 
 <div *ngIf="bob">
   <div>
-    <input [value]="bob.name"/>
+    <input [value]="bob.name.toUpperCase()" />
+
+    // pseudo code
+    const inputDomEl = ...
+    inputDomEl['value'] = bob.name.toUpperCase();
+
   </div>
-  <hr/>
+
+  <hr />
+
+  Name: {{ bob.name }}
 
   <div>
     <button [disabled]="isBtnDisabled">Click me!</button>
   </div>
-  <hr/>
+  <hr />
 
   <div>
-    <img [src]="url" class="small-img"/>
+    <img [src]="url"
+         class="small-img"
+         [class]="" />
   </div>
 </div>

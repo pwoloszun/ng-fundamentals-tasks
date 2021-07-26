@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PropertyBindingExampleComponent implements OnInit {
 
+  // local component state
+  // single source of truth
+
   bob: any;
   isBtnDisabled: boolean;
   url: string;
@@ -14,5 +17,9 @@ export class PropertyBindingExampleComponent implements OnInit {
     this.bob = { name: 'Uncle Bob', sex: 'M' };
     this.isBtnDisabled = true;
     this.url = 'http://www.mememaker.net/static/images/memes/4572301.jpg';
+
+    setTimeout(() => {
+      this.bob.name = `batman ${Math.random()}`
+    }, 2000);
   }
 }

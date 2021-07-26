@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./event-binding-example.component.css']
 })
 export class EventBindingExampleComponent implements OnInit {
-
+  // public API
   value = 0;
+  message = 'a qq!';
 
-  increment() {
+  increment(n: number, msg: string) {
+    console.log('inc', n, msg);
+
     this.value += 1;
   }
 
