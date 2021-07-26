@@ -16,6 +16,18 @@ export class CarConfiguratorComponent implements OnInit {
   selectedDriveWheel: string | null = null;
   driveWheels = ['4X', 'Front-Wheel-Drive', 'Rear-Wheel-Drive'];
 
+  selectEngineHandler(engine: string) {
+    this.selectedEngine = engine;
+  }
+
+  selectColorHandler(color: string) {
+    this.selectedColor = color;
+  }
+
+  selectDriveWheelHandler(driveWheel: string) {
+    this.selectedDriveWheel = driveWheel;
+  }
+
   ngOnInit() {
   }
 }

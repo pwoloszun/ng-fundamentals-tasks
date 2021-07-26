@@ -10,8 +10,13 @@ const defaultPrompt = 'Choose from:';
 export class OptionPickerComponent implements OnInit {
 
   @Input() label: string;
-
   @Input() options: string[];
+
+  @Output() optionSelect = new EventEmitter<string>();
+
+  optionClickHandler(op: string) {
+    this.optionSelect.emit(op);
+  }
 
   ngOnInit() {
   }
