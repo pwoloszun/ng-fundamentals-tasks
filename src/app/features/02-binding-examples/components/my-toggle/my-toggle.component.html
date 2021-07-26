@@ -3,7 +3,9 @@
 
   <!-- const cssClasses = {'hhh-ggg': true, 'ttt-yyy': false}; -->
 
-  <!-- <div [ngClass]="{'hhh-ggg': bob.name.length > 3, 'ttt-yyy': false}">qqq</div> -->
+  <div [ngClass]="{'hhh-ggg': fullName.length > 3, 'ttt-yyy': false}">qqq</div>
+
+  NAme: {{fullName}}
 
   <button (click)="toggleHandler()"
           mat-raised-button

@@ -1,5 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 
+const selectCssClasses = (isVisible: boolean) => {
+  if (isVisible) {
+    return {
+      'mat-primary': true,
+      'mat-warn': false
+    };
+  } else {
+    return {
+      'mat-primary': false,
+      'mat-warn': true
+    };
+  }
+};
+
 @Component({
   selector: 'nts-my-toggle',
   templateUrl: './my-toggle.component.html',
@@ -8,27 +22,20 @@ import { Component, OnInit } from '@angular/core';
 export class MyToggleComponent implements OnInit {
 
   // primary (aka essential) state
+  firstName = 'bob2222333333';
+  lastName = 'smith';
+  suffix = 'jr.'
+  withSufix = true;
+
+  get fullName() {
+    return `${this.firstName} ${this.lastName} ${this.suffix}`;
+  }
+
   isVisible = true;
 
   // computed (aka derived) state
-  // cssClasses = {
-  //   'mat-primary': true,
-  //   'mat-warn': false
-  // };
-  // buttonText = 'Toggle Hide';
-
   get cssClasses() {
-    if (this.isVisible) {
-      return {
-        'mat-primary': true,
-        'mat-warn': false
-      };
-    } else {
-      return {
-        'mat-primary': false,
-        'mat-warn': true
-      };
-    }
+    return selectCssClasses(this.isVisible);
   }
 
   get buttonText() {
@@ -41,19 +48,6 @@ export class MyToggleComponent implements OnInit {
 
   toggleHandler() {
     this.isVisible = !this.isVisible;
-    // if (this.isVisible) {
-    //   this.cssClasses = {
-    //     'mat-primary': true,
-    //     'mat-warn': false
-    //   };
-    //   this.buttonText = `Toggle Hide`;
-    // } else {
-    //   this.cssClasses = {
-    //     'mat-primary': false,
-    //     'mat-warn': true
-    //   };
-    //   this.buttonText = `Toggle Show`;
-    // }
   }
 
   ngOnInit() {
