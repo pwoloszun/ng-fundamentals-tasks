@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentComponent implements OnInit {
 
-  parentMsg = '';
+  parentMsg = 'ggg';
 
   logMessage(message: string) {
     console.log('received from Child', message);

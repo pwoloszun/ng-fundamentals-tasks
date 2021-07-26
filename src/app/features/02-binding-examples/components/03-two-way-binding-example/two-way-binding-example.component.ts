@@ -18,7 +18,7 @@ export class TwoWayBindingExampleComponent implements OnInit {
     ];
 
     this.message = {
-      text: 'Imba!',
+      text: 'asasasasasaas',
       type: this.types[0]
     };
   }

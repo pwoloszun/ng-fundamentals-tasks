@@ -4,6 +4,11 @@
   <div>
     <p>Message text: {{message?.text}}</p>
     <input [(ngModel)]="message.text" />
+
+    <input [ngModel]="message.text"
+           (ngModelChange)="message.text = $event.toUpperCase()" />
+
+
   </div>
 
   <hr />
