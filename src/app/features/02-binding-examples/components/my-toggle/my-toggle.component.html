@@ -5,11 +5,12 @@
 
   <!-- <div [ngClass]="{'hhh-ggg': bob.name.length > 3, 'ttt-yyy': false}">qqq</div> -->
 
-  <button mat-raised-button
-          class="mat-primmary mat-warn">
-    Toggle TODO
+  <button (click)="toggleHandler()"
+          mat-raised-button
+          [ngClass]="cssClasses">
+    {{buttonText}}
   </button>
-  <p>
+  <p *ngIf="isVisible">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus nisi eu sapien finibus elementum. Integer
     porta mi orci, congue malesuada velit varius eu. Fusce quis ante fermentum, tempus nisi nec, luctus neque.
     Maecenas in laoreet ante, aliquet rutrum justo. Phasellus placerat felis erat, et dapibus libero mollis eget.
