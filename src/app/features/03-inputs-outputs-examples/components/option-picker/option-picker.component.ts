@@ -9,6 +9,10 @@ const defaultPrompt = 'Choose from:';
 })
 export class OptionPickerComponent implements OnInit {
 
+  @Input() label: string;
+
+  @Input() options: string[];
+
   ngOnInit() {
   }
 }
