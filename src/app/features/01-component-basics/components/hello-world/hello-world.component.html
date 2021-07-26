@@ -4,4 +4,16 @@
   </h3>
 
   <p>Name: {{ person.name.toUpperCase() }}</p>
+
+
+  <ul>
+    <li *ngFor="let per of people"
+        (click)="personClick(per)">
+      <div>
+        <h3>{{per.name}}</h3>
+      </div>
+    </li>
+  </ul>
+
+
 </div>

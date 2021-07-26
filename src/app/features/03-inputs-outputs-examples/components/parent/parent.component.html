@@ -7,11 +7,11 @@
     </p>
   </div>
   <div>
-
     <!-- <input [value]="123" (click)="doSmth()" /> -->
 
     <nts-child [text]="parentMsg"
-               (messageSent)="logMessage($event)"></nts-child>
+               (messageSent)="logMessage($event)">
+              </nts-child>
 
   </div>
 </div>
