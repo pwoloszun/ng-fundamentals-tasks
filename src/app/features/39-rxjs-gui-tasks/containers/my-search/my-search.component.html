@@ -5,9 +5,11 @@
   <mat-card-content class="mat-search-content">
     <div>
       <mat-form-field>
+
         <input [formControl]="searchTextCtrl"
                matInput
                placeholder="Search" />
+
       </mat-form-field>
     </div>
 
@@ -20,11 +22,6 @@
         </li>
       </ul>
 
-      <!-- <ul>
-        <li *ngFor="let res of results">
-          {{res}}
-        </li>
-      </ul> -->
     </div>
   </mat-card-content>
 </mat-card>
