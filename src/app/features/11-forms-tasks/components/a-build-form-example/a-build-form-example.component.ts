@@ -19,6 +19,10 @@ export class ABuildFormExampleComponent implements OnInit {
     console.log('form value', this.formGroupOne.value);
   }
 
+  submitSingleCtrlsForm() {
+    console.log('age:', this.singleAgeCtrl.value, ' name:', this.singleNameCtrl.value);
+  }
+
   ngOnInit(): void {
     this.initSingleCtrls();
     this.initFormOne();

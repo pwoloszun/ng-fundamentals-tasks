@@ -1,5 +1,17 @@
 <h3>a-build-form-example</h3>
 
+<form (ngSubmit)="submitSingleCtrlsForm()">
+  <h3>Simple Form</h3>
+  Name: <input [formControl]="singleNameCtrl" />
+
+  Age: <input [formControl]="singleNameCtrl"
+         type="number" />
+
+  <button type="submit">Sub single ctrl</button>
+</form>
+
+<hr />
+
 <form [formGroup]="formGroupOne"
       (ngSubmit)="submitHandler()"
       class="myForm">

@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { SharedModule } from '../../shared/shared.module';
 
 import { FormsTasksRoutingModule } from './forms-tasks-routing.module';
 import { FormsTasksComponent } from './pages/forms-tasks/forms-tasks.component';
 import { MyFormValidationTaskComponent } from './components/my-form-validation-task/my-form-validation-task.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { FormInfoComponent } from './components/form-info/form-info.component';
 import { ABuildFormExampleComponent } from './components/a-build-form-example/a-build-form-example.component';
 import { BCollectionInFormExampleComponent } from './components/b-collection-in-form-example/b-collection-in-form-example.component';
@@ -33,6 +33,7 @@ import { FFormValuesExampleComponent } from './components/f-form-values-example/
     SharedModule,
 
     FormsTasksRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
   ]
 })
