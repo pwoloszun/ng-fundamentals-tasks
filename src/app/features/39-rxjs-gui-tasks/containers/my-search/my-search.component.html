@@ -13,11 +13,18 @@
 
     <div>
       <h5>Search results</h5>
+
       <ul>
-        <li>result 1 TODO</li>
-        <li>result 2 TODO</li>
-        <li>result 3 TODO</li>
+        <li *ngFor="let res of searchResults$ | async">
+          {{res}}
+        </li>
       </ul>
+
+      <!-- <ul>
+        <li *ngFor="let res of results">
+          {{res}}
+        </li>
+      </ul> -->
     </div>
   </mat-card-content>
 </mat-card>
