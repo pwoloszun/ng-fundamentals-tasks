@@ -21,8 +21,7 @@ export class MySearchComponent {
     debounceTime(600),
     filter((query) => query.length >= 2),
     distinctUntilChanged(),
-    map((query) => this.searchApiService.querySearch$(query)),
-    switchAll()
+    switchMap((query) => this.searchApiService.querySearch$(query))
   );
 
   constructor(private searchApiService: SearchApiService) {
