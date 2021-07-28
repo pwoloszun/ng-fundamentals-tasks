@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { catchError, finalize } from 'rxjs/operators';
+import { catchError, finalize, map, retry, switchMap } from 'rxjs/operators';
 
 import { ErrorModalComponent } from '@shared/error-modal/error-modal.component';
 import { FakeApiService } from '@api/fake-api.service';
 import { fullObserver } from '@app/utils';
+import { NEVER, of } from 'rxjs';
 
 @Component({
   selector: 'nts-get-user',
@@ -22,10 +23,19 @@ export class GetUserComponent {
   }
 
   handleDownloadUser() {
-    // TODO
-    // this.fakeApiService.failedRequest$('/user/100');
+    this.fakeApiService.failedRequest$('/user/100', 'Cant find User with ID=100').pipe(
+      retry(2),
+      catchError((err) => {
+        this.openErrorSnackBar(err.message, 5);
+        return this.handleError$(err);
+      })
+    ).subscribe(fullObserver('get user'));
+  }
 
-    // this.fakeApiService.successfulRequest$('/log/error', 'Cant find User with ID=100');
+  private handleError$(error: Error) {
+    return this.fakeApiService.successfulRequest$('/log/error').pipe(
+      switchMap(() => NEVER)
+    )
   }
 
   private openErrorSnackBar(message: string, durationInSeconds: number) {
