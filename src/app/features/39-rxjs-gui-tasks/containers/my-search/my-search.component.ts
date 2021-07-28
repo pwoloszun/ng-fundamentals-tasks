@@ -3,7 +3,7 @@ import { FormControl } from '@angular/forms';
 import { of, Subscription } from 'rxjs';
 import {
   debounceTime, distinctUntilChanged, switchMap, mergeMap, exhaustMap, delay,
-  mergeAll, switchAll, filter, map
+  mergeAll, switchAll, filter, map, concatMap
 } from 'rxjs/operators';
 
 import { SearchApiService } from '@api/search-api.service';
