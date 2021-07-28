@@ -23,6 +23,9 @@ export class GetUserComponent {
 
   handleDownloadUser() {
     // TODO
+    // this.fakeApiService.failedRequest$('/user/100');
+
+    // this.fakeApiService.successfulRequest$('/log/error', 'Cant find User with ID=100');
   }
 
   private openErrorSnackBar(message: string, durationInSeconds: number) {
